@@ -1,3 +1,3 @@
 # microservices-devops-challenge04
 
-Apply continuous integration to a simple Go application that runs tests and push the docker image to the container registry in GCP
+Apply continuous integration in a simple Go application by running the tests and uploading the docker image to the GCP Container Registry.
