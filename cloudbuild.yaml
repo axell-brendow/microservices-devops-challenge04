@@ -1,12 +1,10 @@
 steps:
 
 - id: "Run tests"
-  name: 'bash'
-  args:
-  - '-c'
-  - |
-    cd src/main \
-    && go test
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test', 'challenge04', '-v', '-cover']
+  env:
+  - GOPATH=.
 
 - id: "Building docker image"
   name: 'gcr.io/cloud-builders/docker'
