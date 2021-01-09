@@ -1,17 +1,12 @@
 steps:
 
-- id: "List files"
-  name: 'bash'
-  args: ['ls', '-la']
-
-- id: "Print go version"
-  name: "gcr.io/cloud-builders/go"
-  args: ["version"]
-  env: ["GOPATH=."]
-
 - id: "Run tests"
-  name: 'gcr.io/cloud-builders/go'
-  args: ['test', './...']
+  name: 'bash'
+  args:
+  - '-c'
+  - |
+    cd src/main \
+    && go test
 
 - id: "Building docker image"
   name: 'gcr.io/cloud-builders/docker'
