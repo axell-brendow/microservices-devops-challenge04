@@ -1,6 +1,6 @@
 steps:
 
-- id: "Run tests"
+- id: "List files"
   name: 'bash'
   args: ['ls', '-la']
 
