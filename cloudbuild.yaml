@@ -4,6 +4,11 @@ steps:
   name: 'bash'
   args: ['ls', '-la']
 
+- id: "Print go version"
+  name: "gcr.io/cloud-builders/go"
+  args: ["version"]
+  env: ["GOPATH=."]
+
 - id: "Run tests"
   name: 'gcr.io/cloud-builders/go'
   args: ['test', './...']
