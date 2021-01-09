@@ -2,9 +2,9 @@ steps:
 
 - id: "Run tests"
   name: 'gcr.io/cloud-builders/go'
+  args: ['test', 'challenge04', '-v', '-cover']
   env:
   - GOPATH=.
-  args: ['test']
 
 - id: "Building docker image"
   name: 'gcr.io/cloud-builders/docker'
